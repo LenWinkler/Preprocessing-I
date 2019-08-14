@@ -65,6 +65,11 @@ html, body {
 	margin: 0 auto;
 }
 
+hr {
+	width: 82.3%;
+	margin-top: 4%;
+}
+
 /*-------Variables---------*/
 
 @mainFont: 'Roboto Slab', serif;
@@ -92,11 +97,12 @@ nav {
 	}
 }
 
-/*-------------IMG------------*/
+/*-------------IMG & TITLE------------*/
 
 .topContent {
 	display: flex;
 	justify-content: space-around;
+	padding-right: 10%;
 }
 
 .image {
@@ -110,6 +116,7 @@ nav {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
+	font-family: @mainFont;
 	
 
 	h1, h2 {
@@ -124,5 +131,39 @@ img {
 	width: 45%;
 }
 
+/*------------ABOUT & SKILLS----------*/
 
+.middleContent {
+	display: flex;
+	justify-content: center;
+
+	.about, .skills {
+		width:40%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		font-family: @mainFont;
+		text-align: center;
+		margin: 10%;
+	}
+
+	.about p {
+		width:90%;
+		font-size: 1.8rem;
+	}
+
+	.topSkills, .bottomSkills {
+		font-size: 60px;
+		display: flex;
+		justify-content: center;
+		
+		i {
+			margin: 0 16% 16% 16%;
+		}
+	}
+}
 
