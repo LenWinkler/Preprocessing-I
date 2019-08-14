@@ -76,6 +76,17 @@ hr {
 @mainTextColor: #778899;
 @secondaryTextColor: #696969;
 
+/*-------MIXINS-------*/
+
+.flexCenter() {
+	display: flex;
+	justify-content: center;
+}
+
+.flexColumn() {
+	display: flex;
+	flex-direction: column;
+}
 
 /*--------NAV--------*/
 
@@ -107,14 +118,12 @@ nav {
 
 .image {
 	width: 100%;
-	display: flex;
-	justify-content: center;
+	.flexCenter();
 }
 
 .nameTitle {
 	
-	display: flex;
-	flex-direction: column;
+	.flexColumn();
 	justify-content: space-evenly;
 	font-family: @mainFont;
 	
@@ -134,13 +143,11 @@ img {
 /*------------ABOUT & SKILLS----------*/
 
 .middleContent {
-	display: flex;
-	justify-content: center;
+	.flexCenter();
 
 	.about, .skills {
 		width:40%;
-		display: flex;
-		flex-direction: column;
+		.flexColumn();
 		align-items: center;
 	}
 
@@ -158,8 +165,7 @@ img {
 
 	.topSkills, .bottomSkills {
 		font-size: 60px;
-		display: flex;
-		justify-content: center;
+		.flexCenter();
 		
 		i {
 			margin: 0 16% 16% 16%;
