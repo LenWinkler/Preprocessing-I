@@ -68,6 +68,10 @@ html, body {
 hr {
 	width: 82.3%;
 	margin-top: 4%;
+
+	@media screen and (max-width:500px) {
+		display: none;
+	}
 }
 
 /*-------Variables---------*/
@@ -97,6 +101,14 @@ nav {
 	font-family: @mainFont;
 	font-size: 2.4rem;
 
+	@media screen and (max-width:500px) {
+		width:100%;
+		flex-direction: column;
+		align-content: center;
+		text-align: center;
+		font-size: 3.5rem;
+	}
+
 	a {
 		margin: 3%;
 		text-decoration: none;
@@ -119,6 +131,10 @@ nav {
 .image {
 	width: 100%;
 	.flexCenter();
+
+	@media screen and (max-width:500px) {
+		flex-direction: column;	
+	}
 }
 
 .nameTitle {
@@ -133,22 +149,38 @@ nav {
 		width: 100%;
 		height:20%;
 		margin-left: 20%;
+
+		@media screen and (max-width:500px) {
+			font-size: 2.5rem;
+			text-align: center;
+			margin-left: 6%;
+			margin-top: 5%;
+		}
 	}
 }
 
 img {
 	width: 45%;
+
+	@media screen and (max-width:500px) {
+			width: 100%;
+			margin-left: 5.8%;		
+	}
 }
 
 /*------------ABOUT & SKILLS----------*/
 
 .middleContent {
 	.flexCenter();
-	margin-bottom: 10%;
-	.about, .skills {
+		margin-bottom: 10%;
+		.about, .skills {
 		width:40%;
 		.flexColumn();
 		align-items: center;
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+		}
 	}
 
 	h2 {
@@ -156,10 +188,16 @@ img {
 		font-family: @mainFont;
 		text-align: center;
 		margin: 10%;
+
+		@media screen and (max-width:500px) {
+			border-top: 1px solid #696969;
+			width: 82%;
+			padding-top: 8%;
+		}
 	}
 
 	.about p {
-		width:90%;
+		width:83%;
 		font-size: 1.8rem;
 	}
 
@@ -171,6 +209,17 @@ img {
 			margin: 0 16% 16% 16%;
 		}
 	}
+
+	@media screen and (max-width:500px) {
+		flex-direction: column;		
+	}
+
+	@media screen and (max-width:500px) {
+		.bottomSkills {
+			border-bottom: 1px solid #696969;
+			padding-bottom: 10%;
+		}		
+	}
 }
 
 /*-------------WORK HISTORY--------------*/
@@ -178,6 +227,12 @@ img {
 .history {
 	margin-bottom:5%;
 	margin-left: 4%;
+
+	@media screen and (max-width:500px) {
+		text-align: center;
+		margin: 15%;
+		padding-left: 46%;	
+	}
 }
 
 .workHistory {
@@ -189,10 +244,6 @@ img {
 	height: 8%;
 	font-size: 2.6rem;
 	font-family: @mainFont;
-
-	h2 {
-		
-	}
 
 	th {
 		border-bottom: 2px solid black; 
@@ -207,6 +258,14 @@ img {
 
 	tr {
 		width: 100%;
+
+		@media screen and (max-width:500px) {
+			width: 48%;
+		}
+	}
+
+	@media screen and (max-width:500px) {
+		margin-right: 40%;		
 	}
 }
 
