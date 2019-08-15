@@ -54,6 +54,253 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
 }
 
+/*--------My code--------*/
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+hr {
+	width: 82.3%;
+	margin-top: 4%;
+
+	@media screen and (max-width:500px) {
+		display: none;
+	}
+}
+
+/*-------Variables---------*/
+
+@mainFont: 'Roboto Slab', serif;
+@mainTextColor: #778899;
+@secondaryTextColor: #696969;
+
+/*-------MIXINS-------*/
+
+.flexCenter() {
+	display: flex;
+	justify-content: center;
+}
+
+.flexColumn() {
+	display: flex;
+	flex-direction: column;
+}
+
+/*--------NAV--------*/
+
+nav {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	font-family: @mainFont;
+	font-size: 2.4rem;
+
+	@media screen and (max-width:500px) {
+		width:100%;
+		flex-direction: column;
+		align-content: center;
+		text-align: center;
+		font-size: 3.5rem;
+	}
+
+	a {
+		margin: 3%;
+		text-decoration: none;
+		color: @mainTextColor;
+
+		:hover {
+			color: black;
+		}
+	}
+}
+
+/*-------------IMG & TITLE------------*/
+
+.topContent {
+	display: flex;
+	justify-content: space-around;
+	padding-right: 10%;
+}
+
+.image {
+	width: 100%;
+	.flexCenter();
+
+	@media screen and (max-width:500px) {
+		flex-direction: column;	
+	}
+}
+
+.nameTitle {
+	
+	.flexColumn();
+	justify-content: space-evenly;
+	font-family: @mainFont;
+	
+
+	h1, h2 {
+		font-size: 3rem;
+		width: 100%;
+		height:20%;
+		margin-left: 20%;
+
+		@media screen and (max-width:500px) {
+			font-size: 2.5rem;
+			text-align: center;
+			margin-left: 6%;
+			margin-top: 5%;
+		}
+	}
+}
+
+img {
+	width: 45%;
+
+	@media screen and (max-width:500px) {
+			width: 100%;
+			margin-left: 5.8%;		
+	}
+}
+
+/*------------ABOUT & SKILLS----------*/
+
+.middleContent {
+	.flexCenter();
+		margin-bottom: 10%;
+		.about, .skills {
+		width:40%;
+		.flexColumn();
+		align-items: center;
+
+		@media screen and (max-width:500px) {
+			width: 100%;
+		}
+	}
+
+	h2 {
+		font-size: 2.5rem;
+		font-family: @mainFont;
+		text-align: center;
+		margin: 10%;
+
+		@media screen and (max-width:500px) {
+			border-top: 1px solid #696969;
+			width: 82%;
+			padding-top: 8%;
+		}
+	}
+
+	.about p {
+		width:83%;
+		font-size: 1.8rem;
+	}
+
+	.topSkills, .bottomSkills {
+		font-size: 60px;
+		.flexCenter();
+		
+		i {
+			margin: 0 16% 16% 16%;
+		}
+	}
+
+	@media screen and (max-width:500px) {
+		flex-direction: column;		
+	}
+
+	@media screen and (max-width:500px) {
+		.bottomSkills {
+			border-bottom: 1px solid #696969;
+			padding-bottom: 10%;
+		}		
+	}
+}
+
+/*-------------WORK HISTORY--------------*/
+
+.history {
+	margin-bottom:5%;
+	margin-left: 4%;
+
+	@media screen and (max-width:500px) {
+		text-align: center;
+		margin: 15%;
+		padding-left: 46%;	
+	}
+}
+
+.workHistory {
+	.flexColumn();
+	align-content: center;
+	justify-content: center;
+	margin-left: 11%;
+	margin-right: 14%;
+	height: 8%;
+	font-size: 2.6rem;
+	font-family: @mainFont;
+
+	th {
+		border-bottom: 2px solid black; 
+	}
+
+	td {
+		margin: 5px;
+		padding: 5%;
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	tr {
+		width: 100%;
+
+		@media screen and (max-width:500px) {
+			width: 48%;
+		}
+	}
+
+	@media screen and (max-width:500px) {
+		margin-right: 40%;		
+	}
+}
+
+/*---------------CONTACT & FOOTER-------------*/
+
+.contact {
+	width: 100%;
+	height: 100%;
+	margin: 5% 0;
+	.flexColumn();
+	align-items: center;
+
+	h3 {
+		font-family: @mainFont;
+		font-size: 3rem;
+		border-top: 1px solid #696969;
+		padding-top: 3%;
+	}
+
+	.contactIcons{
+		font-size: 3.5rem;
+		margin: 4%;
+		
+	}
+
+	i {
+		padding: 20px;
+		color: #696969;
+	}
+}
+
+footer {
+	width: 100%;
+	margin: 5% 0;
+	text-align: center;
+	font-size: 1.3rem;
+	font-family: @mainFont;
+}
